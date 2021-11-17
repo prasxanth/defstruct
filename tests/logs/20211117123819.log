@@ -1,0 +1,9 @@
+2021-11-17 12:38:19.984 - INFO - Pass ✓... (test-suite-module / test-parsed-args): Annotations ^(of ...), ^; & parameters: &optional, &kwonly; defaults
+2021-11-17 12:38:20.248 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-basic): Basic case with annotations [^(of ...)] and standard data types
+2021-11-17 12:38:20.413 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-optional-kwonly): Standard data types, mixed annotations [^(of ...) and ^type], &optional value and default &kwonly parameter
+2021-11-17 12:38:20.422 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-optional-kwonly): Standard data types, mixed annotations [^(of ...) and ^type], &kwonly value and default &optional parameter
+2021-11-17 12:38:20.431 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-optional-kwonly): Standard data types, mixed annotations [^(of ...) and ^type], values for &optional and &kwonly parameters
+2021-11-17 12:38:20.440 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-optional-kwonly): Standard data types, mixed annotations [^(of ...) and ^type], default &optional and &kwonly parameters
+2021-11-17 12:38:20.516 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-custom-property): Custom property default in __post-init__ method initialized correctly
+2021-11-17 12:38:20.523 - INFO - Pass ✓... (test-suite-module / test-defstruct / test-defstruct-custom-property): Custom property with default in '__post-init__ method
+2021-11-17 12:38:20.523 - DEBUG - (test-suite-module): Test Summary → Total: 8    Pass: 8    Fail: 0

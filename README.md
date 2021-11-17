@@ -27,27 +27,23 @@ The typical use of `defstruct` resembles the simplest form of [dataclasses](http
 ```hy
 (require [defstruct.defs [defstruct]])
 
-  (defstruct struct []  (^(of float) data 
-                          ^int x 
-                          &optional ^(of str) [s None]
-                          &kwonly ^float [f 0.5]))
+(defstruct struct []  (^(of float) data 
+                        ^int x 
+                        &optional ^(of str) [s None]
+                        &kwonly ^float [f 0.5]))
 ```
-
 
 ```hy
 (setv test-struct (struct 0.3 2 "pqr"))
 ```
 
-
 ```hy
 test-struct
 ```
 
-
-
-
-    (struct :data 0.3 :x 2 :s 'pqr' :f 0.5)
-
+```hy
+(struct :data 0.3 :x 2 :s 'pqr' :f 0.5)
+```
 
 
 As seen above, the `__repr__` method is provided for displaying a nicely formatted string representation of `defstruct` objects.
@@ -95,21 +91,17 @@ A `defproperty` macro is provided for defining custom properties,
         (setattr self "__info__" (+ self.data self.x))))
 ```
 
-
 ```hy
 (setv test-struct-custom (struct-custom 2.0 3 "abc"))
 ```
-
 
 ```hy
 test-struct-custom
 ```
 
-
-
-
-    (struct_custom :data 2.0 :x 3 :doc 'abc' :info 5.0)
-
+```hy
+(struct_custom :data 2.0 :x 3 :doc 'abc' :info 5.0)
+```
 
 
 A `__post-init__` method allows for implementating functionality after `__init__`,
@@ -136,12 +128,9 @@ A `__post-init__` method allows for implementating functionality after `__init__
 test-struct-post-init
 ```
 
-
-
-
-    (struct_post_init :data 2.0 :x 3 :s 'doc' :info 5.0)
-
-
+```hy
+(struct_post_init :data 2.0 :x 3 :s 'doc' :info 5.0)
+```
 
 Of course one the `__init__` method can be overwritten if needed.
 

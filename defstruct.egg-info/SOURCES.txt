@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+defstruct.egg-info/PKG-INFO
+defstruct.egg-info/SOURCES.txt
+defstruct.egg-info/dependency_links.txt
+defstruct.egg-info/not-zip-safe
+defstruct.egg-info/requires.txt
+defstruct.egg-info/top_level.txt

@@ -106,30 +106,26 @@ test-struct-custom
 
 A `__post-init__` method allows for implementating functionality after `__init__`,
 
+```hy
+(defstruct struct-post-init [] (^(of float) data ^(of int) x ^(of str) doc) "some doc"
+
+    (defproperty "info")
+
+    (defn __post-init__ [self]
+      (setattr self "__info__" (+ self.data self.x))))
+```
 
 ```hy
-(defstruct struct-post-init [] (^(of float) data 
-                                 ^(of int) x 
-                                 &optional ^(of str) [s "doc"]) 
-           
-    "Documentation for struct with __post-init__ method."
-
-    (defproperty "info"
-        (setattr self "__info__" (+ self.data self.x))))
+(setv test-struct-post-init (struct-post-init 2.0 3 "abc"))
 ```
 
 
 ```hy
-(setv test-struct-post-init (struct-post-init 2.0 3))
-```
-
-
-```hy
-test-struct-post-init
+struct-post-init
 ```
 
 ```hy
-(struct_post_init :data 2.0 :x 3 :s 'doc' :info 5.0)
+(struct_post_init :data 2.0 :x 3 :doc 'abc' :info 5.0)
 ```
 
 Of course one the `__init__` method can be overwritten if needed.
@@ -162,7 +158,7 @@ Basic type validation is provided by `pydantic.validate_arguments`,
     [0m
 
 ## Tests
-Ensure `hy` is in the executable path. Run the `tests.hy` command line script from inside the [tests](tests) directory,
+Ensure `hy` is in the executable path. Tests are written using the [hyprovo](https://github.com/prasxanth/hyprovo) library. Run the `tests.hy` command line script from inside the [tests](tests) directory,
 
 ```bash
 ./tests.hy
